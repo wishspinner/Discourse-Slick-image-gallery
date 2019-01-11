@@ -366,9 +366,7 @@
         e.options.pauseOnHover && (e.$list.on("mouseenter.slick", i.proxy(e.interrupt, e, !0)), e.$list.on("mouseleave.slick", i.proxy(e.interrupt, e, !1)))
     }, e.prototype.initializeEvents = function() {
         var e = this;
-        e.initArrowEvents(), e.initDotEvents(), e.initSlideEvents(), e.$list.on("touchstart.slick mousedown.slick", {
-            action: "start"
-        }, e.swipeHandler), e.$list.on("touchmove.slick mousemove.slick", {
+		e.swipeHandler), e.$list.on("touchmove.slick mousemove.slick", {
             action: "move"
         }, e.swipeHandler), e.$list.on("touchend.slick mouseup.slick", {
             action: "end"
