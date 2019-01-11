@@ -1,16 +1,3 @@
-
-
-.lightbox,
-img {
-  margin: 0 auto;
-}
-
-.lightbox-wrapper {
-  display: flex;
-}
-
-
-
 #reply-control div[data-thumb="featured"] > p {
   border-left: 4px solid $tertiary;
   padding-left: 2px;
@@ -26,8 +13,4 @@ img {
 .cooked .slick-initialized img:not(.thumbnail) {
   max-width: 100%;
   height: auto;
-}
-
-.bio-composer .FeaturedImage{
-  display: none;
 }
