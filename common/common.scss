@@ -1,24 +1,16 @@
-//--------------------------------//
-//          Slick Carousel        //
-//  ----------------------------  //
-// Version: 1.8.1                 //
-// Author: Ken Wheeler            //
-// http://kenwheeler.github.io    //
-//--------------------------------//
 
-  .lightbox,
-  img {
-    margin: 0 auto;
-  }
 
-  .lightbox-wrapper {
-    display: flex;
-  }
+.lightbox,
+img {
+  margin: 0 auto;
+}
+
+.lightbox-wrapper {
+  display: flex;
 }
 
 
-// Editor preview
-//------------------------------------------
+
 #reply-control div[data-thumb="featured"] > p {
   border-left: 4px solid $tertiary;
   padding-left: 2px;
@@ -31,7 +23,6 @@
   }
 }
 
-// Reset discourse default image max width
 .cooked .slick-initialized img:not(.thumbnail) {
   max-width: 100%;
   height: auto;
