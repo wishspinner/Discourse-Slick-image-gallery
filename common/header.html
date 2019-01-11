@@ -43,7 +43,6 @@
             }
         }
 
-
     }, e.prototype.destroy = function(e) {
         var t = this;
         t.autoPlayClear(), t.touchObject = {}, t.cleanUpEvents(), i(".slick-cloned", t.$slider).detach(), t.$slides && (t.$slides.removeClass("slick-slide slick-active slick-center slick-visible slick-current").removeAttr("aria-hidden").removeAttr("data-slick-index").each(function() {
@@ -55,32 +54,12 @@
         var t = this;
         i(t.$slider).hasClass("slick-initialized") || (i(t.$slider).addClass("slick-initialized"), t.buildRows(), t.buildOut(), t.setProps(), t.startLoad(), t.loadSlider(), t.checkResponsive(!0), t.focusHandler()), e && t.$slider.trigger("init", [t]), !0 === t.options.accessibility && t.initADA(), t.options.autoplay && (t.paused = !1, t.autoPlay())
 
-
-
-
     }, e.prototype.preventDefault = function(i) {
         i.preventDefault()
 
     }, e.prototype.reinit = function() {
         var e = this;
-     
-
-    }, e.prototype.setHeight = function() {
-        var i = this;
-        if (1 === i.options.slidesToShow && !0 === i.options.adaptiveHeight && !1 === i.options.vertical) {
-            var e = i.$slides.eq(i.currentSlide).outerHeight(!0);
-            i.$list.css("height", e)
-        }
-    }, e.prototype.selectHandler = function(e) {
-        var t = this,
-            o = i(e.target).is(".slick-slide") ? i(e.target) : i(e.target).parents(".slick-slide"),
-            s = parseInt(o.attr("data-slick-index"));
-        s || (s = 0), t.slideCount <= t.options.slidesToShow ? t.slideHandler(s, !1, !0) : t.slideHandler(s)
-
-	}, e.prototype.unload = function() {
-        var e = this;
-        i(".slick-cloned", e.$slider).remove(), e.$dots && e.$dots.remove(), e.$prevArrow && e.htmlExpr.test(e.options.prevArrow) && e.$prevArrow.remove(), e.$nextArrow && e.htmlExpr.test(e.options.nextArrow) && e.$nextArrow.remove(), e.$slides.removeClass("slick-slide slick-active slick-visible slick-current").attr("aria-hidden", "true").css("width", "")
-    }, e.prototype.unslick = function(i) {
+     }, e.prototype.unslick = function(i) {
         var e = this;
         e.$slider.trigger("unslick", [e, i]), e.destroy()
 
