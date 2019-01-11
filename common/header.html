@@ -16,8 +16,6 @@
             var s, n = this;
             n.defaults = {
                 lazyLoad: "ondemand",
-                rows: 1,
-                rtl: !1,
                 slide: ""
             }, n.initials = {
                 unslicked: !1
@@ -60,10 +58,8 @@ var slick_selector = '.cooked div[data-thumbnail="featured"]';
 api.decorateCooked($elem =>
   $elem
     .children(slick_selector)
-    .not(".slick-initialized")
     .slick({
-      slide: ".lightbox-wrapper",
-      cssEase: "linear"
+      slide: ".lightbox-wrapper"
     })
 );
 
