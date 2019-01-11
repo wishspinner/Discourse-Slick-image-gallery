@@ -20,7 +20,7 @@ I18n.translations[currentLocale].js.slick_gallery_button =
 //------------------------------------------
 // initialize slick
 //------------------------------------------
-var slick_selector = '.cooked div[data-theme-slick="1"]';
+var slick_selector = '.cooked div[data-thumbnail="featured"]';
 
 api.decorateCooked($elem =>
   $elem
@@ -50,7 +50,7 @@ api.onToolbarCreate(function(toolbar) {
     title: "slick_gallery_button",
     perform: function perform(e) {
       return e.applySurround(
-        '<div data-theme-slick="1">\n\n',
+        '<div data-thumbnail="featured">\n\n',
         "\n\n</div>",
         "slick_add_images_prompt"
       );
