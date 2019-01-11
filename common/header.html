@@ -417,7 +417,7 @@
         var i = this;
         i.setPosition(), i.$slideTrack.css({
             opacity: 1
-        }), i.$slider.removeClass("slick-loading"), i.initUI(), "progressive" === i.options.lazyLoad && i.progressiveLazyLoad()
+        }), i.$slider.removeClass("slick-loading"), "progressive" === i.options.lazyLoad && i.progressiveLazyLoad()
     }, e.prototype.next = e.prototype.slickNext = function() {
         this.changeSlide({
             data: {
