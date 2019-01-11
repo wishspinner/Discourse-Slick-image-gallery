@@ -21,12 +21,9 @@
                     return i('<button type="button" />').text(t + 1)
                 },
                 lazyLoad: "ondemand",
-                mobileFirst: !1,
                 rows: 1,
                 rtl: !1,
                 slide: "",
-                useCSS: !0,
-                useTransform: !0,
                 zIndex: 1e3
             }, n.initials = {
                 unslicked: !1
@@ -42,20 +39,8 @@
         if (o = document.createDocumentFragment(), n = l.$slider.children(), l.options.rows > 1) {
             for (r = l.options.slidesPerRow * l.options.rows, s = Math.ceil(n.length / r), i = 0; i < s; i++) {
                 var d = document.createElement("div");
-                for (e = 0; e < l.options.rows; e++) {
-                    var a = document.createElement("div");
-                    for (t = 0; t < l.options.slidesPerRow; t++) {
-                        var c = i * r + (e * l.options.slidesPerRow + t);
-                        n.get(c) && a.appendChild(n.get(c))
-                    }
-                    d.appendChild(a)
-                }
                 o.appendChild(d)
             }
-            l.$slider.empty().append(o), l.$slider.children().children().children().css({
-                width: 100 / l.options.slidesPerRow + "%",
-                display: "inline-block"
-            })
         }
 
 
@@ -86,17 +71,11 @@
             var e = i.$slides.eq(i.currentSlide).outerHeight(!0);
             i.$list.css("height", e)
         }
-
-
-    }, e.prototype.interrupt = function(i) {
-        var e = this;
-        i || e.autoPlay(), e.interrupted = i
     }, e.prototype.selectHandler = function(e) {
         var t = this,
             o = i(e.target).is(".slick-slide") ? i(e.target) : i(e.target).parents(".slick-slide"),
             s = parseInt(o.attr("data-slick-index"));
         s || (s = 0), t.slideCount <= t.options.slidesToShow ? t.slideHandler(s, !1, !0) : t.slideHandler(s)
-
 
 	}, e.prototype.unload = function() {
         var e = this;
@@ -128,7 +107,7 @@ I18n.translations[currentLocale].js.slick_gallery_button =
   settings.Slick_button_text;
 
 //------------------------------------------
-// initialize slick
+// initialize image feature
 //------------------------------------------
 var slick_selector = '.cooked div[data-thumbnail="featured"]';
 
@@ -154,7 +133,7 @@ api.decorateCooked($elem =>
 api.onToolbarCreate(function(toolbar) {
   toolbar.addButton({
     trimLeading: true,
-    id: "SlickGallery",
+    id: "FeaturedImage",
     group: "insertions",
     icon: settings.Slick_button_icon,
     title: "slick_gallery_button",
