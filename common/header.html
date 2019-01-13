@@ -19,7 +19,7 @@
                 slide: ""
             }, n.initials = {
                 unslicked: !1
-            }, i.extend(n, n.initials), n.$slider = i(t), s = i(t).data("slick") || {}, n.options = i.extend({}, n.defaults, o, s), n.instanceUid = e++, n.htmlExpr = /^(?:\s*(<[\w\W]+>)[^>]*)$/, n.init(!0)
+            }, i.extend(n, n.initials), n.$slider = i(t), s = i(t).data("feat") || {}, n.options = i.extend({}, n.defaults, o, s), n.instanceUid = e++, n.htmlExpr = /^(?:\s*(<[\w\W]+>)[^>]*)$/, n.init(!0)
         }
     }()).prototype.getSlick = function() {
         return this
@@ -28,13 +28,13 @@
     }, e.prototype.preventDefault = function(i) {
         i.preventDefault()
 
-    }, i.fn.slick = function() {
+    }, i.fn.feat = function() {
         var i, t, o = this,
             s = arguments[0],
             n = Array.prototype.slice.call(arguments, 1),
             r = o.length;
         for (i = 0; i < r; i++)
-            if ("object" == typeof s || void 0 === s ? o[i].slick = new e(o[i], s) : t = o[i].slick[s].apply(o[i].slick, n), void 0 !== t) return t;
+            if ("object" == typeof s || void 0 === s ? o[i].feat = new e(o[i], s) : t = o[i].feat[s].apply(o[i].feat, n), void 0 !== t) return t;
         return o
     }
 });
@@ -58,7 +58,7 @@ var slick_selector = '.cooked div[data-thumbnail="featured"]';
 api.decorateCooked($elem =>
   $elem
     .children(slick_selector)
-    .slick({
+    .feat({
       slide: ".lightbox-wrapper"
     })
 );
